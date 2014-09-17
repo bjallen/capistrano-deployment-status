@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "capistrano-deployment-status"
   spec.version       = Capistrano::DeploymentStatus::VERSION
   spec.authors       = ["B.J. Allen"]
-  spec.email         = ["ballen@numerex.com"]
+  spec.email         = ["bjallen@fourthvalve.com"]
   spec.summary       = %q{Creates a deployment status page.}
   spec.description   = %q{Creates a deployment status page. This page shows what was deployed and who deployed it.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/bjallen/capistrano-deployment-status"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
