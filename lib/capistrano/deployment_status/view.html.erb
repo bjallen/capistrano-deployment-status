@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= application %> Status</title>
+</head>
+<body>
+
+  <p>
+    application: <%= application %>
+  </p>
+
+  <p>
+    branch/tag: <%= branch %>
+  </p>
+
+  <p>
+    deployed: <%= Time.now.strftime('%b %d, %Y @ %-l:%M:%S%P %Z') %>
+  </p>
+
+  <p>
+    deployed by: <%= deployed_by %>
+  </p>
+
+  <p>
+    release revision: <%= real_revision %>
+  </p>
+
+  <p>
+    release timestamp: <%= release_timestamp %>
+  </p>
+
+</body>
+</html>
