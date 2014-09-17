@@ -1,12 +1,6 @@
 require 'erb'
 
 set :deploy_status_template, "public/deployment_status.html"
-# load File.expand_path("../set_rails_env.rake", __FILE__)
-
-# module Capistrano
-#   class FileNotFound < StandardError
-#   end
-# end
 
 namespace :deploy do
   desc 'Create deployment status page'
