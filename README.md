@@ -33,7 +33,7 @@ Require the gem in your Capfile:
 require 'capistrano/deployment_status'
 ```
 
-Currently, that's it. A task will at the end of the deploy that will place a deployment_status.html file in the release's public directory.
+Currently, that's it. A task will run at the end of the deploy that will place a deployment_status.html file in the release's public directory.
 
 ## Contributing
 
