@@ -1,7 +1,5 @@
 require 'erb'
 
-set :deploy_status_template, "public/deployment_status.html"
-
 namespace :deploy do
   desc 'Create deployment status page'
   task :status_page do
@@ -24,6 +22,12 @@ namespace :deploy do
   end
 end
 after "deploy:published", "deploy:status_page"
+
+namespace :load do
+  task :defaults do
+    set :deploy_status_template, "public/deployment_status.html"
+  end
+end
 
 def template
   input_path = File.join(File.dirname(__FILE__), "../deployment_status/view.html.erb")
