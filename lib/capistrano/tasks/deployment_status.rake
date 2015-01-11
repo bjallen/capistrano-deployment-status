@@ -14,7 +14,8 @@ namespace :deploy do
     deployed_by = fetch(:deployed_by, ENV['USER'])
 
     result = StringIO.new(ERB.new(template).result(binding))
-    output_path = "#{release_path}/#{fetch(:deploy_status_template)}"
+    output_path = "#{release_path}/#{fetch(:deploy_status_destination)}"
+
     on roles(:app) do
       upload! result, output_path
       execute :chmod, '644', output_path
@@ -25,7 +26,7 @@ after "deploy:published", "deploy:status_page"
 
 namespace :load do
   task :defaults do
-    set :deploy_status_template, "public/deployment_status.html"
+    set :deploy_status_destination, "public/deployment_status.html"
   end
 end
 
