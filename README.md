@@ -33,7 +33,15 @@ Require the gem in your Capfile:
 require 'capistrano/deployment_status'
 ```
 
-Currently, that's it. A task will run at the end of the deploy that will place a deployment_status.html file in the release's public directory.
+Currently, that's it. A task will run at the end of the deploy that will place the rendered file wherever you'd like. By default it's destination is public/deployment_status.html. You can override this default with:
+
+```
+set :deploy_status_destination, "app/views/admin/secret_status_file.html"
+```
+
+## Roadmap
+
+The final feature I'm planning to implement is to allow a custom template. This would allow full control over content and styling. It could also be generated and then saved as an .html.erb file for further processing at runtime.
 
 ## Contributing
 
